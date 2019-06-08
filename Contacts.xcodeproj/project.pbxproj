@@ -26,6 +26,9 @@
 		BFE8DF2322AB5F5400694B53 /* ContactDetailModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8DF1D22AB5F5400694B53 /* ContactDetailModels.swift */; };
 		BFE8DF2422AB5F5400694B53 /* ContactDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8DF1E22AB5F5400694B53 /* ContactDetailViewController.swift */; };
 		BFE8DF2522AB5F5400694B53 /* ContactDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8DF1F22AB5F5400694B53 /* ContactDetailInteractor.swift */; };
+		BFE8DF2722AB694700694B53 /* ContactInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8DF2622AB694700694B53 /* ContactInfo.swift */; };
+		BFE8DF2922AB876F00694B53 /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8DF2822AB876F00694B53 /* ContactCell.swift */; };
+		BFE8DF2C22AB942500694B53 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8DF2B22AB942500694B53 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +74,9 @@
 		BFE8DF1D22AB5F5400694B53 /* ContactDetailModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailModels.swift; sourceTree = "<group>"; };
 		BFE8DF1E22AB5F5400694B53 /* ContactDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailViewController.swift; sourceTree = "<group>"; };
 		BFE8DF1F22AB5F5400694B53 /* ContactDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailInteractor.swift; sourceTree = "<group>"; };
+		BFE8DF2622AB694700694B53 /* ContactInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInfo.swift; sourceTree = "<group>"; };
+		BFE8DF2822AB876F00694B53 /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
+		BFE8DF2B22AB942500694B53 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +127,7 @@
 		BFA658CD22AB5A7F002DB9AE /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
+				BFE8DF2A22AB93FF00694B53 /* HTTP */,
 				BFE8DF0B22AB5E9100694B53 /* Initial Setup */,
 				BFE8DF0A22AB5E8D00694B53 /* StoryBoard */,
 				BFE8DF0922AB5E8900694B53 /* Scenes */,
@@ -162,6 +169,7 @@
 		BFE8DF0722AB5E2600694B53 /* TableCell */ = {
 			isa = PBXGroup;
 			children = (
+				BFE8DF2822AB876F00694B53 /* ContactCell.swift */,
 			);
 			path = TableCell;
 			sourceTree = "<group>";
@@ -169,6 +177,7 @@
 		BFE8DF0822AB5E8500694B53 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BFE8DF2622AB694700694B53 /* ContactInfo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -223,6 +232,14 @@
 				BFE8DF1F22AB5F5400694B53 /* ContactDetailInteractor.swift */,
 			);
 			path = ContactDetail;
+			sourceTree = "<group>";
+		};
+		BFE8DF2A22AB93FF00694B53 /* HTTP */ = {
+			isa = PBXGroup;
+			children = (
+				BFE8DF2B22AB942500694B53 /* NetworkManager.swift */,
+			);
+			path = HTTP;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -362,8 +379,11 @@
 				BFE8DF1522AB5F3600694B53 /* ContactWorker.swift in Sources */,
 				BFA658CF22AB5A7F002DB9AE /* AppDelegate.swift in Sources */,
 				BFE8DF1422AB5F3600694B53 /* ContactPresenter.swift in Sources */,
+				BFE8DF2722AB694700694B53 /* ContactInfo.swift in Sources */,
 				BFE8DF2222AB5F5400694B53 /* ContactDetailRouter.swift in Sources */,
+				BFE8DF2922AB876F00694B53 /* ContactCell.swift in Sources */,
 				BFE8DF2322AB5F5400694B53 /* ContactDetailModels.swift in Sources */,
+				BFE8DF2C22AB942500694B53 /* NetworkManager.swift in Sources */,
 				BFE8DF2422AB5F5400694B53 /* ContactDetailViewController.swift in Sources */,
 				BFA658D722AB5A7F002DB9AE /* Contacts.xcdatamodeld in Sources */,
 				BFE8DF2522AB5F5400694B53 /* ContactDetailInteractor.swift in Sources */,
@@ -547,6 +567,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Contacts/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -566,6 +587,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Contacts/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

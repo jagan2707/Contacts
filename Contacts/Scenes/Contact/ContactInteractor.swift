@@ -9,7 +9,7 @@
 import UIKit
 
 protocol ContactBusinessLogic {
-    func doSomething(request: Contact.Something.Request)
+    func getContacts(request: Contact.GetContacts.Request)
 }
 
 class ContactInteractor: ContactBusinessLogic {
@@ -18,10 +18,13 @@ class ContactInteractor: ContactBusinessLogic {
     
     // MARK: Business logic
     
-    func doSomething(request: Contact.Something.Request) {
-        worker.doSomeWork()
+    func getContacts(request: Contact.GetContacts.Request) {
         
-        let response = Contact.Something.Response()
-        presenter?.presentSomething(response: response)
+        worker.getContactList(request: request, onSuccess: { contactList in
+            self.presenter?.presentContacts(response: Contact.GetContacts.Response(result: contactList   ))
+        }) { failureError in
+            self.presenter?.presentAlert(response: failureError)
+        }
     }
 }
+

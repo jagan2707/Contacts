@@ -11,12 +11,19 @@ import UIKit
 enum Contact {
     // MARK: Use cases
     
-    enum Something {
+    enum GetContacts {
         struct Request {
         }
         struct Response {
+            var result: [ContactInfo]
         }
         struct ViewModel {
+           var content: [ContactInfo]
         }
+    }
+    
+    struct ContactListFailure
+    {
+        var alertString: String
     }
 }

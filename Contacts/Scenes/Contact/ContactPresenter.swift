@@ -9,7 +9,9 @@
 import UIKit
 
 protocol ContactPresentationLogic {
-    func presentSomething(response: Contact.Something.Response)
+    func presentContacts(response: Contact.GetContacts.Response)
+    func presentAlert(response: Contact.ContactListFailure)
+
 }
 
 class ContactPresenter: ContactPresentationLogic {
@@ -17,8 +19,13 @@ class ContactPresenter: ContactPresentationLogic {
     
     // MARK: Presentation logic
     
-    func presentSomething(response: Contact.Something.Response) {
-        let viewModel = Contact.Something.ViewModel()
-        viewController?.displaySomething(viewModel: viewModel)
+    func presentContacts(response: Contact.GetContacts.Response) {
+        
+       let viewModel  = Contact.GetContacts.ViewModel(content: response.result)
+        viewController?.displayContactList(viewModel: viewModel)
+    }
+    
+    func presentAlert(response: Contact.ContactListFailure){
+        viewController?.displayAlert(contactListFailure: response)
     }
 }
